@@ -2,4 +2,10 @@ language: java
 java:
    - "jdk-1.8"
 script:
-   - java JavaProgram.java 
+ - java javaProgram.py
+services:
+   - docker
+before_install:
+  - docker build -t kirtigupta123/java-img .
+  - docker images 
+  
