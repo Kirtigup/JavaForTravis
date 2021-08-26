@@ -1,4 +1,4 @@
-FROM openjdk:1.8
+FROM java
 ADD JavaProgram.java /
 CMD ["java","./JavaProgram.java"]
 
