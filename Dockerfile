@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD JavaProgram.java /
-CMD ["java","-jar","/JavaProgram.java"]
+RUN javac JavaProgram.java
+ENTRYPOINT java JavaProgram.java
 
