@@ -8,4 +8,4 @@ services:
 before_install:
   - docker build -t kirtigupta123/java-img .
   - docker images 
-  
+   
