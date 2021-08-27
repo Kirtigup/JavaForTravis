@@ -1,4 +1,6 @@
-FROM alpine:latest
-ADD JavaProgram.class JavaProgram.class
-RUN apk --update add openjdk8-jre
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "JavaProgram"]
+FROM java:8
+COPY src /home/root/java/src
+WORKDIR /home/root/java
+RUN mkdir bin
+RUN javac -d bin src/JavaProgram.java
+ENTRYPOINT ["java", "-cp", "bin", "JavaProgram"]
